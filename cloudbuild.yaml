@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/semester2-412321/dhivakar100852462/gcpimage:$COMMIT_SHA', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/semester2-412321/dhivakarrk-100852462/gcpimage:$COMMIT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/semester2-412321/dhivakar100852462/gcpimage:$COMMIT_SHA']
+  args: ['push', 'us-central1-docker.pkg.dev/semester2-412321/dhivakarrk-100852462/gcpimage:$COMMIT_SHA']
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
