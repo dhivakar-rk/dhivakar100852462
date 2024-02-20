@@ -2,7 +2,7 @@
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'us-central1-docker.pkg.dev/semester2-412321/dhivakarrk-100852462/gcpimage:${COMMIT_SHA}', '.']
-  # Push the Docker image to the artifact registry
+  # Push the Docker image to the artifact registry!
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/semester2-412321/dhivakarrk-100852462/gcpimage:${COMMIT_SHA}']
   # Deploy the Docker container to Google Cloud Run
