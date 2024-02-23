@@ -17,7 +17,7 @@ options:
       - '-c'
       - |
         gcloud run deploy nodejs-app \
-          --image=us-central1-docker.pkg.dev/semester2-415116/dhivakar-midtermgcp/dhivakarimage:${COMMIT_SHA} \
+          --image=us-central1-docker.pkg.dev/semester2-415116/dhivakarmidtermgcp/dhivakarimage:${COMMIT_SHA} \
           --platform=managed \
           --region=us-central1 \
           --port=3000 \
@@ -25,4 +25,4 @@ options:
 
   images:
 # Store images in Google Artifact Registry
-  - us-central1-docker.pkg.dev/semester2-415116/dhivakar-midtermgcp/dhivakarimage:${COMMIT_SHA}
+  - us-central1-docker.pkg.dev/semester2-415116/dhivakarmidtermgcp/dhivakarimage:${COMMIT_SHA}
