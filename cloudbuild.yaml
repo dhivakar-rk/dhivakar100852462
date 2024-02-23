@@ -5,12 +5,6 @@
   # Push the Docker image to the artifact registry!
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/semester2-415116/dhivakarmidtermgcp/dhivakarimage:${COMMIT_SHA}']
-
-options:
-  # Set defaultLogsBucketBehavior to REGIONAL_USER_OWNED_BUCKET
-  # defaultLogsBucket: 'gs://your-build-logs-bucket' # Replace with your build logs bucket
-  defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
-
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'sh'
     args:
@@ -23,6 +17,11 @@ options:
           --port=3000 \
           --allow-unauthenticated
 
-  images:
+options:
+  # Set defaultLogsBucketBehavior to REGIONAL_USER_OWNED_BUCKET
+  # defaultLogsBucket: 'gs://your-build-logs-bucket' # Replace with your build logs bucket
+  defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
+
+images:
 # Store images in Google Artifact Registry
   - us-central1-docker.pkg.dev/semester2-415116/dhivakarmidtermgcp/dhivakarimage:${COMMIT_SHA}
